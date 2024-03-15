@@ -3,27 +3,52 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
 
+  img, 
+  picture, 
+  video, 
+  canvas, 
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, 
+  button, 
+  textarea, 
+  select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  html {
+    --color-white: hsl(0deg, 0%, 100%);
+
+    --color-primary-22: hsl(245deg, 10%, 22%);
+
+    --color-secondary-21: hsl(205deg, 41%, 21%);
+  }
+
+  body {
+    color: var(--color-primary-22);
+  }
 
 `;
 

@@ -3,6 +3,7 @@ import { Public_Sans } from 'next/font/google';
 
 import StyledComponentsRegistry from '@/lib/registy';
 import GlobalStyles from '@/components/GlobalStyles';
+import NavBar from '@/components/NavBar';
 
 const publicSans = Public_Sans({ subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       </head>
       <body className={publicSans.className}>
         <StyledComponentsRegistry>
+          <NavBar />
           {children}
           <GlobalStyles />
         </StyledComponentsRegistry>
