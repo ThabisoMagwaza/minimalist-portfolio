@@ -1,5 +1,12 @@
 import * as React from 'react';
+import ProjectPreviews from '@/components/ProjectPreviews';
+import ContactSection from '@/components/ContactSection';
 
 export default function Page() {
-  return <h1>Porfolio Index</h1>;
+  return (
+    <main>
+      <ProjectPreviews />
+      <ContactSection />
+    </main>
+  );
 }

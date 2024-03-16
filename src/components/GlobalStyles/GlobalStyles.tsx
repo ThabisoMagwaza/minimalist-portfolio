@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    line-height: 1.5;
+    line-height: 2;
     -webkit-font-smoothing: antialiased;
   }
 

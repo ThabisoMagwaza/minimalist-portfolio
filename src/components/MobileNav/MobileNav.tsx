@@ -42,7 +42,7 @@ function MobileNav({ children }: MobileNavProps) {
               </NavListItem>
               <NavListItem>
                 <NavLink onClick={() => setOpen(false)} href="/portfolio-index">
-                  Contact
+                  Portfolio
                 </NavLink>
               </NavListItem>
               <NavListItem>

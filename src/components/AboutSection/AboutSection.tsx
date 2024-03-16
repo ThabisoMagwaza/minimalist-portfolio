@@ -56,7 +56,6 @@ const Context = styled.div`
 `;
 
 const Paragraph = styled.p`
-  line-height: 2;
   margin-top: 28px;
   margin-bottom: 24px;
 `;
