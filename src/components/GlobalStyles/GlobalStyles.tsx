@@ -44,10 +44,12 @@ const GlobalStyles = createGlobalStyle`
     --color-primary-22: hsl(245deg, 10%, 22%);
 
     --color-secondary-21: hsl(205deg, 41%, 21%);
+    --color-secondary-18: hsl(205deg, 41%, 18%);
   }
 
   body {
     color: var(--color-primary-22);
+    font-family: 'Public Sans', sans-serif;
   }
 
 `;
