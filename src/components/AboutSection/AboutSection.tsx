@@ -42,6 +42,7 @@ function AboutSection() {
 
 const Section = styled(MaxWidthWrapper)`
   margin-top: 96px;
+  margin-bottom: 115px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -49,7 +50,9 @@ const Section = styled(MaxWidthWrapper)`
 
 const Context = styled.div`
   padding-top: 32px;
+  padding-bottom: 51px;
   border-top: ${Properties.BorderLight};
+  border-bottom: ${Properties.BorderLight};
 `;
 
 const Paragraph = styled.p`
