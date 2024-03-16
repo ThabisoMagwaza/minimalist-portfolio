@@ -25,13 +25,7 @@ export default function Page({
 
   const nextPoject = PROJECTS[(index + 1) % PROJECTS.length];
 
-  let previosProjectIndex = index - 1;
-
-  if (previosProjectIndex < 0) {
-    previosProjectIndex = PROJECTS.length - 1;
-  }
-
-  const previousProject = PROJECTS[previosProjectIndex];
+  const previousProject = PROJECTS.at(index - 1)!;
 
   return (
     <main>
