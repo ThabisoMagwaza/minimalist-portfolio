@@ -40,7 +40,7 @@ function ProjectPreview({ project }: ProjectPreviewProps) {
           slider.
         </p>
         <SecondaryButton href={`/portfolio/${slug}`}>
-          View Website
+          View Project
         </SecondaryButton>
       </Content>
     </Wrapper>

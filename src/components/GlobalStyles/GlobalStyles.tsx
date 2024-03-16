@@ -42,9 +42,12 @@ const GlobalStyles = createGlobalStyle`
     --color-white: hsl(0deg, 0%, 100%);
 
     --color-primary-22: hsl(245deg, 10%, 22%);
+    --color-primary-22-op50: hsl(245deg, 10%, 22%, 0.5);
 
     --color-secondary-21: hsl(205deg, 41%, 21%);
     --color-secondary-18: hsl(205deg, 41%, 18%);
+
+    --color-tertiary-64: hsl(168deg, 88%, 26%);
 
     --border-light: 1px solid hsl(245deg, 41%, 22%, 0.15);
 
