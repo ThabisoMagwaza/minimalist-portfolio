@@ -9,7 +9,7 @@ import SecondaryButton from '../SecondaryButton';
 
 function AboutSection() {
   return (
-    <Section as="section">
+    <Section as="section" id="about-me">
       <picture>
         <source srcSet="/images/homepage/mobile/image-homepage-profile.jpg, /images/homepage/mobile/image-homepage-profile@2x.jpg" />
         <Image

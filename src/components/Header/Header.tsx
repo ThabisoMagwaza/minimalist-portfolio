@@ -25,7 +25,7 @@ function Header() {
           Hey, I&apos;m Alex Spencer and I love building beautiful websites
         </Heading1>
 
-        <PrimaryButton href="/">About Me</PrimaryButton>
+        <PrimaryButton href="#about-me">About Me</PrimaryButton>
       </Hero>
     </MaxWidthWrapper>
   );

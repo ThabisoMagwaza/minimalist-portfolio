@@ -47,6 +47,8 @@ const GlobalStyles = createGlobalStyle`
     --color-secondary-18: hsl(205deg, 41%, 18%);
 
     --border-light: 1px solid hsl(245deg, 41%, 22%, 0.15);
+
+    scroll-behavior: smooth;
   }
 
   body {
