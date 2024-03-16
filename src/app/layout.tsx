@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { Public_Sans, Ibarra_Real_Nova } from 'next/font/google';
 
 import StyledComponentsRegistry from '@/lib/registy';
 import GlobalStyles from '@/components/GlobalStyles';
 import NavBar from '@/components/NavBar';
 
-const publicSans = Public_Sans({ subsets: ['latin'] });
-const ibarra = Ibarra_Real_Nova({ subsets: ['latin'] });
+import { publicSans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -23,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
       </head>
-      <body className={`${ibarra.className} ${publicSans.className}`}>
+      <body className={`${publicSans.className}`}>
         <StyledComponentsRegistry>
           <NavBar />
           {children}

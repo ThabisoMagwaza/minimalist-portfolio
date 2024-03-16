@@ -1,18 +1,17 @@
 'use client';
 import * as React from 'react';
 import styled from 'styled-components';
-
 import { ibarra } from '@/lib/fonts';
 
 type HeadingProps = {
   children: React.ReactNode;
 };
 
-function Heading1({ children }: HeadingProps) {
+function Heading2({ children }: HeadingProps) {
   return <Heading className={ibarra.className}>{children}</Heading>;
 }
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   line-height: 1.05;
   font-size: ${40 / 16}rem;
   font-family: 'Ibarra Real Nova', serif;
@@ -21,4 +20,4 @@ const Heading = styled.h1`
   font-style: normal;
 `;
 
-export default Heading1;
+export default Heading2;

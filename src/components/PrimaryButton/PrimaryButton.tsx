@@ -43,7 +43,6 @@ const Wrapper = styled(Link)`
   height: 48px;
 
   background: ${COLORS.Secondary21};
-  font-family: 'Public Sans', sans-serif;
 
   display: flex;
 `;
