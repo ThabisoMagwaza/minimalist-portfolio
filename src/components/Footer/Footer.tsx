@@ -1,7 +1,6 @@
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 import { COLORS } from '@/constants/Colors';
