@@ -14,14 +14,15 @@ type ProjectPreviewProps = {
 };
 
 function ProjectPreview({ project }: ProjectPreviewProps) {
-  const previewImage = project.previews[0].mobile.srcSet;
+  const previewImages = project.portfolioImg.mobile.srcSet;
+  const previewImage = project.heroImg.mobile.src;
   const name = project.name;
   const slug = project.slug;
 
   return (
     <Wrapper as="article">
       <Picture>
-        <source srcSet={previewImage} />
+        <source srcSet={previewImages} />
         <PreviewImage
           src={previewImage}
           alt={`A static preview of the ${name} project.`}

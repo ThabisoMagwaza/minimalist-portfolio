@@ -15,7 +15,8 @@ export type Project = {
   description: string;
   techStack: string[];
   background: string;
-  hero: ResponsiveImage;
+  heroImg: ResponsiveImage;
+  portfolioImg: ResponsiveImage;
   previews: ResponsiveImage[];
 };
 
@@ -34,7 +35,7 @@ export const PROJECTS: Project[] = [
     ],
     background:
       'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
-    hero: {
+    heroImg: {
       mobile: {
         srcSet:
           '/images/detail/mobile/image-manage-hero.jpg, /images/detail/mobil/image-manage-hero@2x.jpg 2x',
@@ -49,6 +50,23 @@ export const PROJECTS: Project[] = [
         srcSet:
           '/images/detail/mobile/image-manage-hero.jpg, /images/detail/mobil/image-manage-hero@2x.jpg 2x',
         src: '/images/detail/mobile/image-manage-hero.jpg',
+      },
+    },
+    portfolioImg: {
+      mobile: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-manage.jpg, /images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-manage.jpg',
+      },
+      tablet: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-manage.jpg, /images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-manage.jpg',
+      },
+      desktop: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-manage.jpg, /images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-manage.jpg',
       },
     },
     previews: [
@@ -85,7 +103,7 @@ export const PROJECTS: Project[] = [
     ],
     background:
       'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
-    hero: {
+    heroImg: {
       mobile: {
         srcSet:
           '/images/detail/mobile/image-bookmark-hero.jpg, /images/detail/mobil/image-bookmark-hero@2x.jpg 2x',
@@ -100,6 +118,23 @@ export const PROJECTS: Project[] = [
         srcSet:
           '/images/detail/mobile/image-bookmark-hero.jpg, /images/detail/mobil/image-bookmark-hero@2x.jpg 2x',
         src: '/images/detail/mobile/image-bookmark-hero.jpg',
+      },
+    },
+    portfolioImg: {
+      mobile: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-bookmark.jpg, /images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-bookmark.jpg',
+      },
+      tablet: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-bookmark.jpg, /images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-bookmark.jpg',
+      },
+      desktop: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-bookmark.jpg, /images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-bookmark.jpg',
       },
     },
     previews: [
@@ -136,7 +171,7 @@ export const PROJECTS: Project[] = [
     ],
     background:
       'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
-    hero: {
+    heroImg: {
       mobile: {
         srcSet:
           '/images/detail/mobile/image-insure-hero.jpg, /images/detail/mobil/image-insure-hero@2x.jpg 2x',
@@ -151,6 +186,23 @@ export const PROJECTS: Project[] = [
         srcSet:
           '/images/detail/mobile/image-insure-hero.jpg, /images/detail/mobil/image-insure-hero@2x.jpg 2x',
         src: '/images/detail/mobile/image-insure-hero.jpg',
+      },
+    },
+    portfolioImg: {
+      mobile: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-insure.jpg, /images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-insure.jpg',
+      },
+      tablet: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-insure.jpg, /images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-insure.jpg',
+      },
+      desktop: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-insure.jpg, /images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-insure.jpg',
       },
     },
     previews: [
@@ -181,7 +233,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Interaction Design', 'Front End Development', 'HTML', 'CSS'],
     background:
       'This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.',
-    hero: {
+    heroImg: {
       mobile: {
         srcSet:
           '/images/detail/mobile/image-fylo-hero.jpg, /images/detail/mobil/image-fylo-hero@2x.jpg 2x',
@@ -196,6 +248,23 @@ export const PROJECTS: Project[] = [
         srcSet:
           '/images/detail/mobile/image-fylo-hero.jpg, /images/detail/mobil/image-fylo-hero@2x.jpg 2x',
         src: '/images/detail/mobile/image-fylo-hero.jpg',
+      },
+    },
+    portfolioImg: {
+      mobile: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-fylo.jpg, /images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-fylo.jpg',
+      },
+      tablet: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-fylo.jpg, /images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-fylo.jpg',
+      },
+      desktop: {
+        srcSet:
+          '/images/portfolio/mobile/image-portfolio-fylo.jpg, /images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x',
+        src: '/images/portfolio/mobile/image-portfolio-fylo.jpg',
       },
     },
     previews: [
