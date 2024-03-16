@@ -5,6 +5,7 @@ import GlobalStyles from '@/components/GlobalStyles';
 import NavBar from '@/components/NavBar';
 
 import { publicSans } from '@/lib/fonts';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <NavBar />
           {children}
+          <Footer />
           <GlobalStyles />
         </StyledComponentsRegistry>
       </body>

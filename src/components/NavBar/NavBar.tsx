@@ -6,18 +6,15 @@ import UnstyledButton from '../UnstyledButton';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import MobileNav from '../MobileNav';
+import Logo from '../Logo';
+import { COLORS } from '@/constants/Colors';
 
 function NavBar() {
   return (
     <NavWrapper>
-      <Link href="/">
-        <Image
-          src="/images/logo.svg"
-          alt="Portfolio Logo"
-          width={61}
-          height={32}
-        />
-      </Link>
+      <LogoLink href="/">
+        <Logo />
+      </LogoLink>
 
       <MobileNav>
         <OpenMenuBtn>
@@ -32,6 +29,10 @@ function NavBar() {
     </NavWrapper>
   );
 }
+
+const LogoLink = styled(Link)`
+  color: ${COLORS.Primary22};
+`;
 
 const OpenMenuBtn = styled(UnstyledButton)`
   padding: 16px;
