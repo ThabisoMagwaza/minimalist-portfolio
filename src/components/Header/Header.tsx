@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -25,7 +26,19 @@ function Header() {
           Hey, I&apos;m Alex Spencer and I love building beautiful websites
         </Heading1>
 
-        <PrimaryButton href="#about-me">About Me</PrimaryButton>
+        <PrimaryButton
+          icon={
+            <Image
+              src="/images/icons/down-arrows.svg"
+              width={16}
+              height={14}
+              alt=""
+            />
+          }
+          href="#about-me"
+        >
+          About Me
+        </PrimaryButton>
       </Hero>
     </MaxWidthWrapper>
   );

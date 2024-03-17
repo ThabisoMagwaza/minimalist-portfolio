@@ -1,29 +1,42 @@
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 import { COLORS } from '@/constants/Colors';
 
-type PrimaryButtonProps = {
+type LinkButtonProps = {
   children: React.ReactNode;
   href: string;
+  icon?: React.ReactNode;
 } & React.ComponentPropsWithoutRef<'a'>;
 
-function PrimaryButton({ children, href, ...delegated }: PrimaryButtonProps) {
+type ButtonProps = {
+  children: React.ReactNode;
+  icon?: React.ReactNode;
+} & React.ComponentPropsWithRef<'button'>;
+
+function isLinkButton(
+  props: LinkButtonProps | ButtonProps
+): props is LinkButtonProps {
+  return 'href' in props;
+}
+
+function PrimaryButton(props: LinkButtonProps | ButtonProps) {
+  if (isLinkButton(props)) {
+    return (
+      <LinkWrapper {...props}>
+        {props.icon && <IconWrapper>{props.icon}</IconWrapper>}
+        <TextWrapper>{props.children}</TextWrapper>
+      </LinkWrapper>
+    );
+  }
+
   return (
-    <Wrapper href={href}>
-      <IconWrapper>
-        <Image
-          src="/images/icons/down-arrows.svg"
-          width={16}
-          height={14}
-          alt=""
-        />
-      </IconWrapper>
-      <TextWrapper>{children}</TextWrapper>
-    </Wrapper>
+    <ButtonWrapper {...props}>
+      {props.icon && <IconWrapper>{props.icon}</IconWrapper>}
+      <TextWrapper>{props.children}</TextWrapper>
+    </ButtonWrapper>
   );
 }
 
@@ -32,10 +45,25 @@ const TextWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;
 
-const Wrapper = styled(Link)`
+const LinkWrapper = styled(Link)`
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: ${12 / 16}rem;
+  color: ${COLORS.White};
+  width: 200px;
+  height: 48px;
+
+  background: ${COLORS.Secondary21};
+
+  display: flex;
+`;
+
+const ButtonWrapper = styled.button`
+  border: none;
+
   text-transform: uppercase;
   font-size: ${12 / 16}rem;
   color: ${COLORS.White};
