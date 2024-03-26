@@ -5,9 +5,15 @@ type UnstyledButtonProps = {
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<'button'>;
 
-function UnstyledButton({ children, ...delegated }: UnstyledButtonProps) {
-  return <Wrapper {...delegated}>{children}</Wrapper>;
-}
+const UnstyledButton = React.forwardRef<HTMLButtonElement, UnstyledButtonProps>(
+  function UnstyledButton({ children, ...delegated }, ref) {
+    return (
+      <Wrapper ref={ref} {...delegated}>
+        {children}
+      </Wrapper>
+    );
+  }
+);
 
 const Wrapper = styled.button`
   background: transparent;
