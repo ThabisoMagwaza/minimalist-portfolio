@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import MobileNav from '../MobileNav';
 import Logo from '../Logo';
 import { COLORS } from '@/constants/Colors';
+import { QUERIES } from '@/constants/Queries';
 
 function NavBar() {
   return (
@@ -15,6 +16,20 @@ function NavBar() {
       <LogoLink href="/">
         <Logo />
       </LogoLink>
+
+      <DesktopNav>
+        <NavList>
+          <NavListItem>
+            <NavLink href="/">Home</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href="/portfolio">Portfolio</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href="/contact">Contact Me</NavLink>
+          </NavListItem>
+        </NavList>
+      </DesktopNav>
 
       <MobileNav>
         <OpenMenuBtn>
@@ -30,6 +45,34 @@ function NavBar() {
   );
 }
 
+const DesktopNav = styled.nav`
+  display: none;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: revert;
+  }
+`;
+
+const NavList = styled.ul`
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 42px;
+`;
+
+const NavListItem = styled.li``;
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: ${12 / 16}rem;
+
+  &:hover {
+    color: ${COLORS.AccentOne54};
+  }
+`;
+
 const LogoLink = styled(Link)`
   color: ${COLORS.Primary22};
 `;
@@ -39,6 +82,10 @@ const OpenMenuBtn = styled(UnstyledButton)`
   margin: -16px;
 
   &[data-state='open'] {
+    display: none;
+  }
+
+  @media ${QUERIES.tabletAndUp} {
     display: none;
   }
 `;

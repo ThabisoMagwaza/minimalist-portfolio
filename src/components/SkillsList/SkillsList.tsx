@@ -32,7 +32,7 @@ const Wrapper = styled.ul`
 `;
 
 const Skill = styled.li`
-  color: ${COLORS.Tertiary64};
+  color: ${COLORS.AccentOne64};
   font-size: ${13 / 16}rem;
   font-weight: 700;
 
@@ -48,7 +48,7 @@ const Skill = styled.li`
     display: inline;
     content: '/';
     font-weight: 700;
-    color: ${COLORS.Tertiary64};
+    color: ${COLORS.AccentOne64};
   }
 `;
 

@@ -47,7 +47,8 @@ const GlobalStyles = createGlobalStyle`
     --color-secondary-21: hsl(205deg, 41%, 21%);
     --color-secondary-18: hsl(205deg, 41%, 18%);
 
-    --color-tertiary-64: hsl(168deg, 88%, 26%);
+    --color-accent-1-54: hsl(168deg, 36%, 54%);
+    --color-accent-1-64: hsl(168deg, 88%, 26%);
 
     --border-light: 1px solid hsl(245deg, 41%, 22%, 0.15);
 

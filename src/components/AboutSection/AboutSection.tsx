@@ -32,9 +32,7 @@ function AboutSection() {
           for a walk, run or cycling. I&apos;d love you to check out my work.
         </Paragraph>
 
-        <SecondaryButton href="/portfolio-index">
-          Go to portfolio
-        </SecondaryButton>
+        <SecondaryButton href="/portfolio">Go to portfolio</SecondaryButton>
       </Context>
     </Section>
   );

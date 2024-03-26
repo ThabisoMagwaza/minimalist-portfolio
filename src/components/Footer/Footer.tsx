@@ -24,7 +24,7 @@ function Footer() {
             <NavLink href="/">Home</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink href="/portfolio-index">Portfolio</NavLink>
+            <NavLink href="/portfolio">Portfolio</NavLink>
           </ListItem>
           <ListItem>
             <NavLink href="/contact">Contact Me</NavLink>
