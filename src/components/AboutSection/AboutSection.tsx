@@ -2,15 +2,18 @@
 import * as React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+
+import { QUERIES } from '@/constants/Queries';
+import { Properties } from '@/constants/Properties';
+
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading2 from '../Heading2';
-import { Properties } from '@/constants/Properties';
 import SecondaryButton from '../SecondaryButton';
 
 function AboutSection() {
   return (
     <Section as="section" id="about-me">
-      <picture>
+      <MobilePicture>
         <source srcSet="/images/homepage/mobile/image-homepage-profile.jpg, /images/homepage/mobile/image-homepage-profile@2x.jpg" />
         <Image
           src="/images/homepage/mobile/image-homepage-profile.jpg"
@@ -18,8 +21,17 @@ function AboutSection() {
           height={346}
           alt="A portrait of Alex in a suit"
         />
-      </picture>
-      <Context>
+      </MobilePicture>
+      <TabletPicture>
+        <source srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x.jpg" />
+        <TabletImage
+          src="/images/homepage/tablet/image-homepage-profile.jpg"
+          width={688}
+          height={600}
+          alt="A portrait of Alex in a suit"
+        />
+      </TabletPicture>
+      <Content>
         <Heading2>About Me</Heading2>
         <Paragraph>
           I&apos;m a junior front-end developer looking for a new role in an
@@ -33,10 +45,32 @@ function AboutSection() {
         </Paragraph>
 
         <SecondaryButton href="/portfolio">Go to portfolio</SecondaryButton>
-      </Context>
+      </Content>
     </Section>
   );
 }
+
+const TabletImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
+
+const MobilePicture = styled.picture`
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
+  }
+`;
+
+const TabletPicture = styled.picture`
+  display: none;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: block;
+    align-self: flex-start;
+    flex: 1;
+    flex-shrink: 100;
+  }
+`;
 
 const Section = styled(MaxWidthWrapper)`
   margin-top: 96px;
@@ -44,13 +78,29 @@ const Section = styled(MaxWidthWrapper)`
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media ${QUERIES.tabletAndUp} {
+    flex-direction: row;
+    gap: 68px;
+  }
 `;
 
-const Context = styled.div`
+const Content = styled.div`
   padding-top: 32px;
   padding-bottom: 51px;
   border-top: ${Properties.BorderLight};
   border-bottom: ${Properties.BorderLight};
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 50px;
+    padding-bottom: 46px;
+  }
 `;
 
 const Paragraph = styled.p`
