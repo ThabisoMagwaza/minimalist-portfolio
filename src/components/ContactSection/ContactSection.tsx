@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { QUERIES } from '@/constants/Queries';
+import { Properties } from '@/constants/Properties';
 
 import Heading2 from '../Heading2';
 import SecondaryButton from '../SecondaryButton';
@@ -12,10 +13,21 @@ function ContactSection() {
   return (
     <Wrapper as="section">
       <Heading>Interested in doing a project together?</Heading>
+      <Ruler />
       <SecondaryButton href="/contact">Contact Me</SecondaryButton>
     </Wrapper>
   );
 }
+
+const Ruler = styled.hr`
+  display: none;
+  border: ${Properties.BorderLight};
+  flex: 1;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: revert;
+  }
+`;
 
 const Wrapper = styled(MaxWidthWrapper)`
   margin-bottom: 80px;
