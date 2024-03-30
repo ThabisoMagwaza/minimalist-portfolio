@@ -3,8 +3,9 @@ import * as React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { PROJECTS } from '@/lib/data';
+import { QUERIES } from '@/constants/Queries';
 import { Properties } from '@/constants/Properties';
+import { PROJECTS } from '@/lib/data';
 
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import Heading2 from '@/components/Heading2';
@@ -31,33 +32,46 @@ export default function Page({
     <main>
       <PageWrapper>
         <header>
-          <HeroPicture>
+          <MobileHeroPicture>
             <source srcSet={project.heroImg.mobile.srcSet} />
             <DetailImage
               src={project.heroImg.mobile.srcSet}
-              width={690}
-              height={310}
-              alt=""
+              width={311}
+              height={140}
+              alt={`A screenshot of the ${project.name} project`}
             />
-          </HeroPicture>
+          </MobileHeroPicture>
+
+          <TabletHeroPicture>
+            <source srcSet={project.heroImg.tablet.srcSet} />
+            <DetailImage
+              src={project.heroImg.tablet.src}
+              width={689}
+              height={310}
+              alt={`A screenshot of the ${project.name} project`}
+            />
+          </TabletHeroPicture>
 
           <HeroContent>
-            <Heading2>{project.name}</Heading2>
+            <LeftWrapper>
+              <Heading2>{project.name}</Heading2>
 
-            <p>{project.description}</p>
+              <MobileDescription>{project.description}</MobileDescription>
 
-            <div>
-              <SkillsList skills={project.skills} />
-              <SkillsList skills={project.techStack} />
-            </div>
+              <div>
+                <SkillsList skills={project.skills} />
+                <SkillsList skills={project.techStack} />
+              </div>
 
-            <SecondaryButton
-              href={project.website}
-              target="_blank"
-              rel="noopenner, noreferrer"
-            >
-              Visit Website
-            </SecondaryButton>
+              <SecondaryButton
+                href={project.website}
+                target="_blank"
+                rel="noopenner, noreferrer"
+              >
+                Visit Website
+              </SecondaryButton>
+            </LeftWrapper>
+            <TabletDescription>{project.description}</TabletDescription>
           </HeroContent>
         </header>
 
@@ -101,8 +115,36 @@ export default function Page({
   );
 }
 
+const LeftWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1;
+`;
+
+const TabletDescription = styled.p`
+  display: none;
+  flex: 1;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: block;
+  }
+`;
+
+const MobileDescription = styled.p`
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
+  }
+`;
+
 const PageWrapper = styled(MaxWidthWrapper)`
   margin-bottom: 64px;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-top: 54px;
+    margin-bottom: 80px;
+  }
 `;
 
 const PreviewImage = styled(Image)`
@@ -112,6 +154,10 @@ const PreviewImage = styled(Image)`
 
 const PreviewPicture = styled.picture`
   height: 197px;
+
+  @media ${QUERIES.tabletAndUp} {
+    height: 434px;
+  }
 `;
 
 const PreviewImages = styled.div`
@@ -125,6 +171,10 @@ const Preview = styled.section`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-bottom: 80px;
+  }
 `;
 
 const Background = styled.section`
@@ -136,19 +186,39 @@ const Background = styled.section`
 `;
 
 const HeroContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-
   padding-bottom: 24px;
   margin-bottom: 48px;
+
   border-bottom: ${Properties.BorderLight};
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    border-top: ${Properties.BorderLight};
+
+    display: flex;
+    gap: 12px;
+  }
 `;
 
-const HeroPicture = styled.picture`
+const MobileHeroPicture = styled.picture`
   height: 140px;
   margin-bottom: 40px;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
+  }
+`;
+
+const TabletHeroPicture = styled.picture`
+  height: 310px;
+  margin-bottom: 40px;
+  display: none;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: block;
+  }
 `;
 
 const DetailImage = styled(Image)`

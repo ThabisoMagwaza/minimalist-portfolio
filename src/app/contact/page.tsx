@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { Properties } from '@/constants/Properties';
 import { COLORS } from '@/constants/Colors';
+import { QUERIES } from '@/constants/Queries';
 
 import Heading2 from '@/components/Heading2';
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
@@ -30,7 +31,7 @@ export default function Page() {
 
   return (
     <main>
-      <MaxWidthWrapper>
+      <Wrapper>
         <GetInTouchSection>
           <Heading2>Get in Touch</Heading2>
 
@@ -108,10 +109,16 @@ export default function Page() {
             <PrimaryButton>Send Message</PrimaryButton>
           </ContactForm>
         </ContactSection>
-      </MaxWidthWrapper>
+      </Wrapper>
     </main>
   );
 }
+
+const Wrapper = styled(MaxWidthWrapper)`
+  @media ${QUERIES.tabletAndUp} {
+    margin-top: 94px;
+  }
+`;
 
 const ContactForm = styled.form`
   display: flex;
@@ -160,6 +167,10 @@ const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-bottom: 96px;
+  }
 `;
 
 const GetInTouchSection = styled.section`
@@ -172,6 +183,10 @@ const GetInTouchSection = styled.section`
 
   border-top: ${Properties.BorderLight};
   border-bottom: ${Properties.BorderLight};
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 32px;
+  }
 `;
 
 const SocialLinks = styled.ul`
