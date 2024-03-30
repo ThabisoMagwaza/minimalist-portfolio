@@ -82,6 +82,7 @@ const Section = styled(MaxWidthWrapper)`
   @media ${QUERIES.tabletAndUp} {
     flex-direction: row;
     gap: 68px;
+    margin-bottom: 96px;
   }
 `;
 

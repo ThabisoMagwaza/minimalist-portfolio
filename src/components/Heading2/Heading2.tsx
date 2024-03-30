@@ -5,10 +5,14 @@ import { ibarra } from '@/lib/fonts';
 
 type HeadingProps = {
   children: React.ReactNode;
-};
+} & React.ComponentPropsWithoutRef<'h2'>;
 
-function Heading2({ children }: HeadingProps) {
-  return <Heading className={ibarra.className}>{children}</Heading>;
+function Heading2({ children, ...delegated }: HeadingProps) {
+  return (
+    <Heading className={ibarra.className} {...delegated}>
+      {children}
+    </Heading>
+  );
 }
 
 const Heading = styled.h2`
