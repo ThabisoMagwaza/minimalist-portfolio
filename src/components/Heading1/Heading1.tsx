@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { ibarra } from '@/lib/fonts';
+import { QUERIES } from '@/constants/Queries';
 
 type HeadingProps = {
   children: React.ReactNode;
@@ -19,6 +20,10 @@ const Heading = styled.h1`
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${50 / 16}rem;
+  }
 `;
 
 export default Heading1;

@@ -35,6 +35,17 @@ function Header() {
         />
       </TabletPicture>
 
+      <DesktopPicture>
+        <source srcSet="/images/homepage/desktop/image-homepage-hero.jpg, /images/homepage/desktop/image-homepage-hero@2x.jpg 2x" />
+        <ImageStyled
+          src="/images/homepage/desktop/image-homepage-hero.jpg"
+          alt="An desktop mockup showng an example project on screen"
+          width={1110}
+          height={600}
+          priority
+        />
+      </DesktopPicture>
+
       <Hero>
         <Heading1>
           Hey, I&apos;m Alex Spencer and I love building beautiful websites
@@ -65,6 +76,10 @@ const Wrapper = styled(MaxWidthWrapper)`
   @media ${QUERIES.tabletAndUp} {
     margin-top: 47px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: 54px;
+  }
 `;
 
 const MobilePicture = styled.picture`
@@ -80,6 +95,19 @@ const TabletPicture = styled.picture`
   max-height: 600px;
 
   @media ${QUERIES.tabletAndUp} {
+    display: block;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
+`;
+
+const DesktopPicture = styled.picture`
+  display: none;
+  max-height: 600px;
+
+  @media ${QUERIES.laptopAndUp} {
     display: block;
   }
 `;
@@ -109,6 +137,11 @@ const Hero = styled.div`
 
     padding: ${56 / 16}rem ${56 / 16}rem 0 0;
     gap: 48px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 445px;
+    gap: 53px;
   }
 `;
 
