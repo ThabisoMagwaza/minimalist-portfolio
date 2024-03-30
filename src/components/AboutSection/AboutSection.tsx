@@ -22,6 +22,7 @@ function AboutSection() {
           alt="A portrait of Alex in a suit"
         />
       </MobilePicture>
+
       <TabletPicture>
         <source srcSet="/images/homepage/tablet/image-homepage-profile.jpg, /images/homepage/tablet/image-homepage-profile@2x.jpg" />
         <TabletImage
@@ -31,6 +32,17 @@ function AboutSection() {
           alt="A portrait of Alex in a suit"
         />
       </TabletPicture>
+
+      <DesktopPicture>
+        <source srcSet="/images/homepage/desktop/image-homepage-profile.jpg, /images/homepage/desktop/image-homepage-profile@2x.jpg" />
+        <DesktopImage
+          src="/images/homepage/desktop/image-homepage-profile.jpg"
+          width={540}
+          height={600}
+          alt="A portrait of Alex in a suit"
+        />
+      </DesktopPicture>
+
       <Content>
         <Heading2>About Me</Heading2>
         <Paragraph>
@@ -55,6 +67,11 @@ const TabletImage = styled(Image)`
   height: 100%;
 `;
 
+const DesktopImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`;
+
 const MobilePicture = styled.picture`
   @media ${QUERIES.tabletAndUp} {
     display: none;
@@ -64,11 +81,28 @@ const MobilePicture = styled.picture`
 const TabletPicture = styled.picture`
   display: none;
 
+  width: 281px;
+  height: 600px;
+  align-self: flex-start;
+  flex-shrink: 100;
+
   @media ${QUERIES.tabletAndUp} {
     display: block;
-    align-self: flex-start;
-    flex: 1;
-    flex-shrink: 100;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
+`;
+
+const DesktopPicture = styled.picture`
+  display: none;
+
+  width: 540px;
+  height: 600px;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: block;
   }
 `;
 
@@ -83,6 +117,12 @@ const Section = styled(MaxWidthWrapper)`
     flex-direction: row;
     gap: 68px;
     margin-bottom: 96px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    gap: 125px;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 `;
 
@@ -101,6 +141,10 @@ const Content = styled.div`
   @media ${QUERIES.tabletAndUp} {
     padding-top: 50px;
     padding-bottom: 46px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 350px;
   }
 `;
 

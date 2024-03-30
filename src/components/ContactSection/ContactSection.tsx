@@ -43,6 +43,10 @@ const Wrapper = styled(MaxWidthWrapper)`
     text-align: start;
     margin-bottom: 96px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-bottom: 150px;
+  }
 `;
 
 const Heading = styled(Heading2)`
