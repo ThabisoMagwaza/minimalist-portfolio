@@ -57,6 +57,7 @@ const NavList = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
+  letter-spacing: 2px;
   gap: 42px;
 `;
 

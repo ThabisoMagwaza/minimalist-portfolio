@@ -1,14 +1,21 @@
 'use client';
 import * as React from 'react';
 import styled from 'styled-components';
-import { type Project, PROJECTS } from '@/lib/data';
+import { QUERIES } from '@/constants/Queries';
+
+import { PROJECTS } from '@/lib/data';
+
 import ProjectPreview from '../ProjectPreview';
 
 function ProjectPreviews() {
   return (
     <Wrapper>
-      {PROJECTS.map((project) => (
-        <ProjectPreview key={project.slug} project={project} />
+      {PROJECTS.map((project, index) => (
+        <ProjectPreview
+          key={project.slug}
+          project={project}
+          reverse={index % 2 !== 0}
+        />
       ))}
     </Wrapper>
   );
@@ -19,6 +26,11 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 72px;
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 94px;
+    gap: 80px;
+  }
 `;
 
 export default ProjectPreviews;
