@@ -60,6 +60,11 @@ function Header() {
 
 const Wrapper = styled(MaxWidthWrapper)`
   position: relative;
+  margin-top: 40px;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-top: 47px;
+  }
 `;
 
 const MobilePicture = styled.picture`

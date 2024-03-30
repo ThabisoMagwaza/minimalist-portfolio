@@ -23,6 +23,7 @@ function ProjectPreviews() {
 
 const Wrapper = styled.section`
   padding-bottom: 80px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 72px;

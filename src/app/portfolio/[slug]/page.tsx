@@ -140,9 +140,10 @@ const MobileDescription = styled.p`
 
 const PageWrapper = styled(MaxWidthWrapper)`
   margin-bottom: 64px;
+  margin-top: 40px;
 
   @media ${QUERIES.tabletAndUp} {
-    margin-top: 54px;
+    margin-top: 94px;
     margin-bottom: 80px;
   }
 `;

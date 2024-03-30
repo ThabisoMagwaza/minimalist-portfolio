@@ -93,7 +93,6 @@ const OpenMenuBtn = styled(UnstyledButton)`
 
 const NavWrapper = styled(MaxWidthWrapper)`
   padding-top: 32px;
-  padding-bottom: 40px;
 
   display: flex;
   justify-content: space-between;
