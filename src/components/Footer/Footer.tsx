@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { COLORS } from '@/constants/Colors';
+import { QUERIES } from '@/constants/Queries';
 
 import Logo from '../Logo';
 import MaxWidthWrapper from '../MaxWidthWrapper';
@@ -13,45 +14,51 @@ import LinkedIn from '../LinkedIn';
 
 function Footer() {
   return (
-    <Wrapper as="footer">
-      <LogoLink href="/">
-        <Logo />
-      </LogoLink>
+    <OuterWrapper>
+      <Wrapper>
+        <LogoLink href="/">
+          <Logo />
+        </LogoLink>
 
-      <nav>
-        <NavList>
-          <ListItem>
-            <NavLink href="/">Home</NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink href="/portfolio">Portfolio</NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink href="/contact">Contact Me</NavLink>
-          </ListItem>
-        </NavList>
-      </nav>
+        <nav>
+          <NavList>
+            <ListItem>
+              <NavLink href="/">Home</NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink href="/portfolio">Portfolio</NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink href="/contact">Contact Me</NavLink>
+            </ListItem>
+          </NavList>
+        </nav>
 
-      <SocialLinks>
-        <ListItem>
-          <SocialLink href="/">
-            <Github />
-          </SocialLink>
-        </ListItem>
-        <ListItem>
-          <SocialLink href="/">
-            <Twitter />
-          </SocialLink>
-        </ListItem>
-        <ListItem>
-          <SocialLink href="/">
-            <LinkedIn />
-          </SocialLink>
-        </ListItem>
-      </SocialLinks>
-    </Wrapper>
+        <SocialLinks>
+          <ListItem>
+            <SocialLink href="/">
+              <Github />
+            </SocialLink>
+          </ListItem>
+          <ListItem>
+            <SocialLink href="/">
+              <Twitter />
+            </SocialLink>
+          </ListItem>
+          <ListItem>
+            <SocialLink href="/">
+              <LinkedIn />
+            </SocialLink>
+          </ListItem>
+        </SocialLinks>
+      </Wrapper>
+    </OuterWrapper>
   );
 }
+
+const OuterWrapper = styled.footer`
+  background: ${COLORS.Primary22};
+`;
 
 const SocialLink = styled(Link)`
   text-decoration: none;
@@ -64,6 +71,11 @@ const SocialLinks = styled.ul`
   align-items: center;
   gap: 15px;
   padding: 0;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-left: auto;
+    gap: 16px;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -82,6 +94,10 @@ const NavList = styled.ul`
   flex-direction: column;
   align-items: center;
   gap: 32px;
+
+  @media ${QUERIES.tabletAndUp} {
+    flex-direction: row;
+  }
 `;
 
 const ListItem = styled.li``;
@@ -91,7 +107,6 @@ const LogoLink = styled(Link)`
 `;
 
 const Wrapper = styled(MaxWidthWrapper)`
-  background: ${COLORS.Primary22};
   padding-top: 56px;
   padding-bottom: 56px;
   color: ${COLORS.White};
@@ -100,6 +115,11 @@ const Wrapper = styled(MaxWidthWrapper)`
   flex-direction: column;
   align-items: center;
   gap: 40px;
+
+  @media ${QUERIES.tabletAndUp} {
+    flex-direction: row;
+    gap: 48px;
+  }
 `;
 
 export default Footer;
