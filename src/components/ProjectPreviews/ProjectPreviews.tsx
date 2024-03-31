@@ -6,10 +6,11 @@ import { QUERIES } from '@/constants/Queries';
 import { PROJECTS } from '@/lib/data';
 
 import ProjectPreview from '../ProjectPreview';
+import MaxWidthWrapper from '../MaxWidthWrapper';
 
 function ProjectPreviews() {
   return (
-    <Wrapper>
+    <Wrapper as="section">
       {PROJECTS.map((project, index) => (
         <ProjectPreview
           key={project.slug}
@@ -21,7 +22,7 @@ function ProjectPreviews() {
   );
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled(MaxWidthWrapper)`
   padding-bottom: 80px;
   margin-top: 40px;
   display: flex;
@@ -31,6 +32,10 @@ const Wrapper = styled.section`
   @media ${QUERIES.tabletAndUp} {
     padding-top: 94px;
     gap: 80px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    padding-bottom: 150px;
   }
 `;
 

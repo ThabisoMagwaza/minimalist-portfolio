@@ -21,7 +21,7 @@ function ProjectPreview({ project, reverse }: ProjectPreviewProps) {
   const slug = project.slug;
 
   return (
-    <Wrapper as="article" $reverse={reverse}>
+    <Wrapper $reverse={reverse}>
       <MobilePicture>
         <source srcSet={project.portfolioImg.mobile.srcSet} />
         <PreviewImage
@@ -41,6 +41,16 @@ function ProjectPreview({ project, reverse }: ProjectPreviewProps) {
           height={314}
         />
       </TabletPicture>
+
+      <DesktopPicture>
+        <source srcSet={project.portfolioImg.desktop.srcSet} />
+        <PreviewImage
+          src={project.portfolioImg.desktop.src}
+          alt={`A static preview of the ${name} project.`}
+          width={540}
+          height={600}
+        />
+      </DesktopPicture>
 
       <Content>
         <Heading2>{name}</Heading2>
@@ -74,6 +84,21 @@ const Content = styled.div`
     padding-top: 32px;
     padding-bottom: 50px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 350px;
+    justify-content: center;
+  }
+`;
+
+const DesktopPicture = styled.picture`
+  display: none;
+  width: 540px;
+  height: 600px;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: block;
+  }
 `;
 
 const TabletPicture = styled.picture`
@@ -83,7 +108,11 @@ const TabletPicture = styled.picture`
   flex: 1.15;
 
   @media ${QUERIES.tabletAndUp} {
-    display: revert;
+    display: block;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
   }
 `;
 
@@ -104,7 +133,7 @@ const PreviewImage = styled(Image)`
   height: 100%;
 `;
 
-const Wrapper = styled(MaxWidthWrapper)<{
+const Wrapper = styled.article<{
   readonly $reverse: boolean;
 }>`
   @media ${QUERIES.tabletAndUp} {
@@ -112,6 +141,11 @@ const Wrapper = styled(MaxWidthWrapper)<{
     align-items: center;
     flex-direction: ${(props) => (props.$reverse && 'row-reverse') || 'row'};
     gap: 69px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    gap: 125px;
+    align-items: revert;
   }
 `;
 
