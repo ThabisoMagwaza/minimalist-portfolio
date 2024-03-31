@@ -41,13 +41,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/detail/mobile/image-manage-hero.jpg, /images/detail/mobile/image-manage-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-manage-hero.jpg',
+          '/images/detail/tablet/image-manage-hero.jpg, /images/detail/tablet/image-manage-hero@2x.jpg 2x',
+        src: '/images/detail/tablet/image-manage-hero.jpg',
       },
       desktop: {
         srcSet:
-          '/images/detail/mobile/image-manage-hero.jpg, /images/detail/mobil/image-manage-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-manage-hero.jpg',
+          '/images/detail/desktop/image-manage-hero.jpg, /images/detail/desktop/image-manage-hero@2x.jpg 2x',
+        src: '/images/detail/desktop/image-manage-hero.jpg',
       },
     },
     portfolioImg: {
@@ -58,13 +58,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-manage.jpg, /images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-manage.jpg',
+          '/images/portfolio/tablet/image-portfolio-manage.jpg, /images/portfolio/tablet/image-portfolio-manage@2x.jpg 2x',
+        src: '/images/portfolio/tablet/image-portfolio-manage.jpg',
       },
       desktop: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-manage.jpg, /images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-manage.jpg',
+          '/images/portfolio/desktop/image-portfolio-manage.jpg, /images/portfolio/desktop/image-portfolio-manage@2x.jpg 2x',
+        src: '/images/portfolio/desktop/image-portfolio-manage.jpg',
       },
     },
     previews: [
@@ -76,13 +76,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-manage-preview-1.jpg, /images/detail/mobile/image-manage-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-manage-preview-1.jpg',
+            '/images/detail/tablet/image-manage-preview-1.jpg, /images/detail/tablet/image-manage-preview-1@2x.jpg 2x',
+          src: '/images/detail/tablet/image-manage-preview-1.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-manage-preview-1.jpg, /images/detail/mobile/image-manage-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-manage-preview-1.jpg',
+            '/images/detail/desktop/image-manage-preview-1.jpg, /images/detail/desktop/image-manage-preview-1@2x.jpg 2x',
+          src: '/images/detail/desktop/image-manage-preview-1.jpg',
         },
       },
       {
@@ -93,13 +93,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-manage-preview-2.jpg, /images/detail/mobile/image-manage-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-manage-preview-2.jpg',
+            '/images/detail/tablet/image-manage-preview-2.jpg, /images/detail/tablet/image-manage-preview-2@2x.jpg 2x',
+          src: '/images/detail/tablet/image-manage-preview-2.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-manage-preview-2.jpg, /images/detail/mobile/image-manage-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-manage-preview-2.jpg',
+            '/images/detail/desktop/image-manage-preview-2.jpg, /images/detail/desktop/image-manage-preview-2@2x.jpg 2x',
+          src: '/images/detail/desktop/image-manage-preview-2.jpg',
         },
       },
     ],
@@ -122,13 +122,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/detail/mobile/image-bookmark-hero.jpg, /images/detail/mobile/image-bookmark-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-bookmark-hero.jpg',
+          '/images/detail/tablet/image-bookmark-hero.jpg, /images/detail/tablet/image-bookmark-hero@2x.jpg 2x',
+        src: '/images/detail/tablet/image-bookmark-hero.jpg',
       },
       desktop: {
         srcSet:
-          '/images/detail/mobile/image-bookmark-hero.jpg, /images/detail/mobil/image-bookmark-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-bookmark-hero.jpg',
+          '/images/detail/desktop/image-bookmark-hero.jpg, /images/detail/desktop/image-bookmark-hero@2x.jpg 2x',
+        src: '/images/detail/desktop/image-bookmark-hero.jpg',
       },
     },
     portfolioImg: {
@@ -139,13 +139,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-bookmark.jpg, /images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-bookmark.jpg',
+          '/images/portfolio/tablet/image-portfolio-bookmark.jpg, /images/portfolio/tablet/image-portfolio-bookmark@2x.jpg 2x',
+        src: '/images/portfolio/tablet/image-portfolio-bookmark.jpg',
       },
       desktop: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-bookmark.jpg, /images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-bookmark.jpg',
+          '/images/portfolio/desktop/image-portfolio-bookmark.jpg, /images/portfolio/desktop/image-portfolio-bookmark@2x.jpg 2x',
+        src: '/images/portfolio/desktop/image-portfolio-bookmark.jpg',
       },
     },
     previews: [
@@ -157,13 +157,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-bookmark-preview-1.jpg, /images/detail/mobile/image-bookmark-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-bookmark-preview-1.jpg',
+            '/images/detail/tablet/image-bookmark-preview-1.jpg, /images/detail/tablet/image-bookmark-preview-1@2x.jpg 2x',
+          src: '/images/detail/tablet/image-bookmark-preview-1.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-bookmark-preview-1.jpg, /images/detail/mobile/image-bookmark-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-bookmark-preview-1.jpg',
+            '/images/detail/desktop/image-bookmark-preview-1.jpg, /images/detail/desktop/image-bookmark-preview-1@2x.jpg 2x',
+          src: '/images/detail/desktop/image-bookmark-preview-1.jpg',
         },
       },
       {
@@ -174,13 +174,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-bookmark-preview-2.jpg, /images/detail/mobile/image-bookmark-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-bookmark-preview-2.jpg',
+            '/images/detail/tablet/image-bookmark-preview-2.jpg, /images/detail/tablet/image-bookmark-preview-2@2x.jpg 2x',
+          src: '/images/detail/tablet/image-bookmark-preview-2.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-bookmark-preview-2.jpg, /images/detail/mobile/image-bookmark-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-bookmark-preview-2.jpg',
+            '/images/detail/desktop/image-bookmark-preview-2.jpg, /images/detail/desktop/image-bookmark-preview-2@2x.jpg 2x',
+          src: '/images/detail/desktop/image-bookmark-preview-2.jpg',
         },
       },
     ],
@@ -203,13 +203,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/detail/mobile/image-insure-hero.jpg, /images/detail/mobile/image-insure-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-insure-hero.jpg',
+          '/images/detail/tablet/image-insure-hero.jpg, /images/detail/tablet/image-insure-hero@2x.jpg 2x',
+        src: '/images/detail/tablet/image-insure-hero.jpg',
       },
       desktop: {
         srcSet:
-          '/images/detail/mobile/image-insure-hero.jpg, /images/detail/mobile/image-insure-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-insure-hero.jpg',
+          '/images/detail/desktop/image-insure-hero.jpg, /images/detail/desktop/image-insure-hero@2x.jpg 2x',
+        src: '/images/detail/desktop/image-insure-hero.jpg',
       },
     },
     portfolioImg: {
@@ -220,13 +220,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-insure.jpg, /images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-insure.jpg',
+          '/images/portfolio/tablet/image-portfolio-insure.jpg, /images/portfolio/tablet/image-portfolio-insure@2x.jpg 2x',
+        src: '/images/portfolio/tablet/image-portfolio-insure.jpg',
       },
       desktop: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-insure.jpg, /images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-insure.jpg',
+          '/images/portfolio/desktop/image-portfolio-insure.jpg, /images/portfolio/desktop/image-portfolio-insure@2x.jpg 2x',
+        src: '/images/portfolio/desktop/image-portfolio-insure.jpg',
       },
     },
     previews: [
@@ -238,13 +238,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-insure-preview-1.jpg, /images/detail/mobile/image-insure-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-insure-preview-1.jpg',
+            '/images/detail/tablet/image-insure-preview-1.jpg, /images/detail/tablet/image-insure-preview-1@2x.jpg 2x',
+          src: '/images/detail/tablet/image-insure-preview-1.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-insure-preview-1.jpg, /images/detail/mobile/image-insure-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-insure-preview-1.jpg',
+            '/images/detail/desktop/image-insure-preview-1.jpg, /images/detail/desktop/image-insure-preview-1@2x.jpg 2x',
+          src: '/images/detail/desktop/image-insure-preview-1.jpg',
         },
       },
       {
@@ -255,13 +255,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-insure-preview-2.jpg, /images/detail/mobile/image-insure-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-insure-preview-2.jpg',
+            '/images/detail/tablet/image-insure-preview-2.jpg, /images/detail/tablet/image-insure-preview-2@2x.jpg 2x',
+          src: '/images/detail/tablet/image-insure-preview-2.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-insure-preview-2.jpg, /images/detail/mobile/image-insure-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-insure-preview-2.jpg',
+            '/images/detail/desktop/image-insure-preview-2.jpg, /images/detail/desktop/image-insure-preview-2@2x.jpg 2x',
+          src: '/images/detail/desktop/image-insure-preview-2.jpg',
         },
       },
     ],
@@ -284,13 +284,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/detail/mobile/image-fylo-hero.jpg, /images/detail/mobile/image-fylo-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-fylo-hero.jpg',
+          '/images/detail/tablet/image-fylo-hero.jpg, /images/detail/tablet/image-fylo-hero@2x.jpg 2x',
+        src: '/images/detail/tablet/image-fylo-hero.jpg',
       },
       desktop: {
         srcSet:
-          '/images/detail/mobile/image-fylo-hero.jpg, /images/detail/mobile/image-fylo-hero@2x.jpg 2x',
-        src: '/images/detail/mobile/image-fylo-hero.jpg',
+          '/images/detail/desktop/image-fylo-hero.jpg, /images/detail/desktop/image-fylo-hero@2x.jpg 2x',
+        src: '/images/detail/desktop/image-fylo-hero.jpg',
       },
     },
     portfolioImg: {
@@ -301,13 +301,13 @@ export const PROJECTS: Project[] = [
       },
       tablet: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-fylo.jpg, /images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-fylo.jpg',
+          '/images/portfolio/tablet/image-portfolio-fylo.jpg, /images/portfolio/tablet/image-portfolio-fylo@2x.jpg 2x',
+        src: '/images/portfolio/tablet/image-portfolio-fylo.jpg',
       },
       desktop: {
         srcSet:
-          '/images/portfolio/mobile/image-portfolio-fylo.jpg, /images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x',
-        src: '/images/portfolio/mobile/image-portfolio-fylo.jpg',
+          '/images/portfolio/desktop/image-portfolio-fylo.jpg, /images/portfolio/desktop/image-portfolio-fylo@2x.jpg 2x',
+        src: '/images/portfolio/desktop/image-portfolio-fylo.jpg',
       },
     },
     previews: [
@@ -319,13 +319,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-fylo-preview-1.jpg, /images/detail/mobile/image-fylo-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-fylo-preview-1.jpg',
+            '/images/detail/tablet/image-fylo-preview-1.jpg, /images/detail/tablet/image-fylo-preview-1@2x.jpg 2x',
+          src: '/images/detail/tablet/image-fylo-preview-1.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-fylo-preview-1.jpg, /images/detail/mobile/image-fylo-preview-1@2x.jpg 2x',
-          src: '/images/detail/mobile/image-fylo-preview-1.jpg',
+            '/images/detail/desktop/image-fylo-preview-1.jpg, /images/detail/desktop/image-fylo-preview-1@2x.jpg 2x',
+          src: '/images/detail/desktop/image-fylo-preview-1.jpg',
         },
       },
       {
@@ -336,13 +336,13 @@ export const PROJECTS: Project[] = [
         },
         tablet: {
           srcSet:
-            '/images/detail/mobile/image-fylo-preview-2.jpg, /images/detail/mobile/image-fylo-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-fylo-preview-2.jpg',
+            '/images/detail/tablet/image-fylo-preview-2.jpg, /images/detail/tablet/image-fylo-preview-2@2x.jpg 2x',
+          src: '/images/detail/tablet/image-fylo-preview-2.jpg',
         },
         desktop: {
           srcSet:
-            '/images/detail/mobile/image-fylo-preview-2.jpg, /images/detail/mobile/image-fylo-preview-2@2x.jpg 2x',
-          src: '/images/detail/mobile/image-fylo-preview-2.jpg',
+            '/images/detail/desktop/image-fylo-preview-2.jpg, /images/detail/desktop/image-fylo-preview-2@2x.jpg 2x',
+          src: '/images/detail/desktop/image-fylo-preview-2.jpg',
         },
       },
     ],
