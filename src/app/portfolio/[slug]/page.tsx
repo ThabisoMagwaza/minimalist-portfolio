@@ -52,6 +52,18 @@ export default function Page({
             />
           </TabletHeroPicture>
 
+          <DesktopPicture>
+            <source srcSet={project.heroImg.desktop.srcSet} />
+            <DetailImage
+              src={project.heroImg.desktop.src}
+              width={1110}
+              height={500}
+              alt={`A screenshot of the ${project.name} project`}
+            />
+          </DesktopPicture>
+        </header>
+
+        <ContentWrapper>
           <HeroContent>
             <LeftWrapper>
               <Heading2>{project.name}</Heading2>
@@ -73,31 +85,61 @@ export default function Page({
             </LeftWrapper>
             <TabletDescription>{project.description}</TabletDescription>
           </HeroContent>
-        </header>
 
-        <Background>
-          <Heading3>Project Background</Heading3>
+          <BodyContent>
+            <Background>
+              <Heading3>Project Background</Heading3>
 
-          <p>{project.background}</p>
-        </Background>
+              <p>{project.background}</p>
+            </Background>
 
-        <Preview>
-          <Heading3>Static Previews</Heading3>
+            <Preview>
+              <Heading3>Static Previews</Heading3>
 
-          <PreviewImages>
-            {project.previews.map((previvew) => (
-              <PreviewPicture key={previvew.mobile.src}>
-                <source srcSet={previvew.mobile.srcSet} />
-                <PreviewImage
-                  src={previvew.mobile.src}
-                  width={689}
-                  height={434}
-                  alt={`A preview image of the ${project.name} project`}
-                />
-              </PreviewPicture>
-            ))}
-          </PreviewImages>
-        </Preview>
+              <MobilePreviewImages>
+                {project.previews.map((previvew) => (
+                  <PreviewPicture key={previvew.mobile.src}>
+                    <source srcSet={previvew.mobile.srcSet} />
+                    <PreviewImage
+                      src={previvew.mobile.src}
+                      width={689}
+                      height={434}
+                      alt={`A preview image of the ${project.name} project`}
+                    />
+                  </PreviewPicture>
+                ))}
+              </MobilePreviewImages>
+
+              <TabletPreviewImages>
+                {project.previews.map((previvew) => (
+                  <PreviewPicture key={previvew.tablet.src}>
+                    <source srcSet={previvew.tablet.srcSet} />
+                    <PreviewImage
+                      src={previvew.tablet.src}
+                      width={689}
+                      height={434}
+                      alt={`A preview image of the ${project.name} project`}
+                    />
+                  </PreviewPicture>
+                ))}
+              </TabletPreviewImages>
+
+              <DesktopPreviewImages>
+                {project.previews.map((previvew) => (
+                  <PreviewPicture key={previvew.desktop.src}>
+                    <source srcSet={previvew.desktop.srcSet} />
+                    <PreviewImage
+                      src={previvew.desktop.src}
+                      width={634}
+                      height={400}
+                      alt={`A preview image of the ${project.name} project`}
+                    />
+                  </PreviewPicture>
+                ))}
+              </DesktopPreviewImages>
+            </Preview>
+          </BodyContent>
+        </ContentWrapper>
 
         <ProjectsNavigator
           previous={{
@@ -115,6 +157,19 @@ export default function Page({
   );
 }
 
+const BodyContent = styled.div`
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 635px;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    gap: 125px;
+  }
+`;
+
 const LeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -130,11 +185,19 @@ const TabletDescription = styled.p`
   @media ${QUERIES.tabletAndUp} {
     display: block;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
 `;
 
 const MobileDescription = styled.p`
   @media ${QUERIES.tabletAndUp} {
     display: none;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: revert;
   }
 `;
 
@@ -145,6 +208,10 @@ const PageWrapper = styled(MaxWidthWrapper)`
   @media ${QUERIES.tabletAndUp} {
     margin-top: 94px;
     margin-bottom: 80px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-bottom: 115px;
   }
 `;
 
@@ -159,12 +226,44 @@ const PreviewPicture = styled.picture`
   @media ${QUERIES.tabletAndUp} {
     height: 434px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    height: 400px;
+  }
 `;
 
-const PreviewImages = styled.div`
+const MobilePreviewImages = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
+`;
+
+const TabletPreviewImages = styled.div`
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: flex;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
+`;
+
+const DesktopPreviewImages = styled.div`
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+  }
 `;
 
 const Preview = styled.section`
@@ -201,6 +300,10 @@ const HeroContent = styled.div`
     display: flex;
     gap: 12px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    align-self: flex-start;
+  }
 `;
 
 const MobileHeroPicture = styled.picture`
@@ -218,6 +321,21 @@ const TabletHeroPicture = styled.picture`
   display: none;
 
   @media ${QUERIES.tabletAndUp} {
+    display: block;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: none;
+  }
+`;
+
+const DesktopPicture = styled.picture`
+  display: none;
+  height: 500px;
+
+  margin-bottom: 115px;
+
+  @media ${QUERIES.laptopAndUp} {
     display: block;
   }
 `;
