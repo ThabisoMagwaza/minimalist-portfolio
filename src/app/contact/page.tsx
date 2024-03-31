@@ -35,35 +35,37 @@ export default function Page() {
         <GetInTouchSection>
           <Heading2>Get in Touch</Heading2>
 
-          <p>
-            I&apos;d love to hear about what you&apos;re working on and how I
-            could help. I&apos;m currently looking for a new role and am open to
-            a wide range of opportunities. My preference would be to find a
-            position in a company in London. But I&apos;m also happy to hear
-            about opportunites that don&apos;t fit that description. I&apos;m a
-            hard-working and positive person who will always approach each task
-            with a sense of purpose and attention to detail. Please do feel free
-            to check out my online profiles below and get in touch using the
-            form.
-          </p>
+          <div>
+            <Paragraph>
+              I&apos;d love to hear about what you&apos;re working on and how I
+              could help. I&apos;m currently looking for a new role and am open
+              to a wide range of opportunities. My preference would be to find a
+              position in a company in London. But I&apos;m also happy to hear
+              about opportunites that don&apos;t fit that description. I&apos;m
+              a hard-working and positive person who will always approach each
+              task with a sense of purpose and attention to detail. Please do
+              feel free to check out my online profiles below and get in touch
+              using the form.
+            </Paragraph>
 
-          <SocialLinks>
-            <ListItem>
-              <SocialLink href="/">
-                <Github />
-              </SocialLink>
-            </ListItem>
-            <ListItem>
-              <SocialLink href="/">
-                <Twitter />
-              </SocialLink>
-            </ListItem>
-            <ListItem>
-              <SocialLink href="/">
-                <LinkedIn />
-              </SocialLink>
-            </ListItem>
-          </SocialLinks>
+            <SocialLinks>
+              <ListItem>
+                <SocialLink href="/">
+                  <Github />
+                </SocialLink>
+              </ListItem>
+              <ListItem>
+                <SocialLink href="/">
+                  <Twitter />
+                </SocialLink>
+              </ListItem>
+              <ListItem>
+                <SocialLink href="/">
+                  <LinkedIn />
+                </SocialLink>
+              </ListItem>
+            </SocialLinks>
+          </div>
         </GetInTouchSection>
 
         <ContactSection>
@@ -114,6 +116,14 @@ export default function Page() {
   );
 }
 
+const Paragraph = styled.p`
+  margin-bottom: 24px;
+
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 635px;
+  }
+`;
+
 const Wrapper = styled(MaxWidthWrapper)`
   @media ${QUERIES.tabletAndUp} {
     margin-top: 94px;
@@ -124,6 +134,11 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media ${QUERIES.laptopAndUp} {
+    max-width: 635px;
+    flex: 1;
+  }
 `;
 
 const Input = styled.input`
@@ -171,6 +186,12 @@ const ContactSection = styled.section`
   @media ${QUERIES.tabletAndUp} {
     padding-bottom: 96px;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 106px;
+  }
 `;
 
 const GetInTouchSection = styled.section`
@@ -186,6 +207,11 @@ const GetInTouchSection = styled.section`
 
   @media ${QUERIES.tabletAndUp} {
     padding-top: 32px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
