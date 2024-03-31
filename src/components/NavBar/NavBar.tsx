@@ -1,16 +1,21 @@
 'use client';
 import * as React from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+
+import { COLORS } from '@/constants/Colors';
+import { QUERIES } from '@/constants/Queries';
+
 import UnstyledButton from '../UnstyledButton';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import MobileNav from '../MobileNav';
 import Logo from '../Logo';
-import { COLORS } from '@/constants/Colors';
-import { QUERIES } from '@/constants/Queries';
 
 function NavBar() {
+  const pathname = usePathname();
+
   return (
     <NavWrapper>
       <LogoLink href="/">
@@ -20,13 +25,19 @@ function NavBar() {
       <DesktopNav>
         <NavList>
           <NavListItem>
-            <NavLink href="/">Home</NavLink>
+            <NavLink $active={pathname === '/'} href="/">
+              Home
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink href="/portfolio">Portfolio</NavLink>
+            <NavLink $active={pathname === '/portfolio'} href="/portfolio">
+              Portfolio
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink href="/contact">Contact Me</NavLink>
+            <NavLink $active={pathname === '/contact'} href="/contact">
+              Contact Me
+            </NavLink>
           </NavListItem>
         </NavList>
       </DesktopNav>
@@ -63,11 +74,13 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li``;
 
-const NavLink = styled(Link)`
+const NavLink = styled(Link)<{ $active: boolean }>`
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
   font-size: ${12 / 16}rem;
+
+  color: ${(props) => (props.$active && COLORS.AccentOne54) || 'inherit'};
 
   &:hover {
     color: ${COLORS.AccentOne54};
